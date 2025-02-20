@@ -1,0 +1,15 @@
+.navbar h1 {
+  text-align: center;
+}
+
+@keyframes colorChange {
+  0% { color: goldenrod; }
+  25% { color: blue; }
+  50% { color: green; }
+  75% { color: yellow; }
+  100% { color: red; }
+}
+
+.navbar h1:hover {
+  animation: colorChange 2s infinite;
+}

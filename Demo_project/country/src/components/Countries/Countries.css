@@ -1,0 +1,21 @@
+.maping {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+
+
+
+}
+.items h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin: 20px;
+    font-size:30px;
+    font-weight: 700;
+    color: red;
+}
