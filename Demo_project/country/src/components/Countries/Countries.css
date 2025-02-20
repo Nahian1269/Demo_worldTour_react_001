@@ -19,3 +19,9 @@
     font-weight: 700;
     color: red;
 }
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

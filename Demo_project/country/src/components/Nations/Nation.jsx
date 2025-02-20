@@ -1,10 +1,21 @@
+import { useState } from "react";
 import "./Nation.css";
 import PropTypes from 'prop-types';
+// import Countries from "../Countries/Countries";
 
 const Nation = ({ country }) => {
   const { name, flags, population, area ,continents , capital ,maps  } = country;
+  const [visited, setVisited] = useState(false);
+    const handleVisited = () => {
+        setVisited(!visited);
+    };
+
+    
+    
   return (
-    <div className="nation">
+    <div>
+  
+    <div className={visited ? 'visited_nations' : 'nation'}>
         <h3>{name.common} </h3>
       <div className="country">
         <div className="flags">
@@ -20,8 +31,11 @@ const Nation = ({ country }) => {
         </div>
       </div>
       <div className="btn">
-      <button onClick={() => window.open(maps.googleMaps, '_blank')} className="btn_flag">About</button>
-    
+      <button onClick={() => window.open(maps.googleMaps, '_blank')} className="btn_flag">MAP</button>
+      <button onClick={handleVisited}  className="btn_visit">{visited ? 'Visited' : 'visit'}</button>
+      
+      
+    </div>
     </div>
     </div>
   );

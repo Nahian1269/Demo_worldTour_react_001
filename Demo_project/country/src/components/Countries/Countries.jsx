@@ -14,6 +14,7 @@ const Countries = () => {
         <div>
         <div className='items'>
         <h3>Countries: {countries.length}</h3>  
+        <h3>Visited Country :  </h3>
         </div>
          
          <div className='maping'>
