@@ -3,13 +3,20 @@ import "./Nation.css";
 import PropTypes from 'prop-types';
 // import Countries from "../Countries/Countries";
 
-const Nation = ({ country }) => {
+const Nation = ({ country, handleVisitedCounty }) => {
   const { name, flags, population, area ,continents , capital ,maps  } = country;
   const [visited, setVisited] = useState(false);
     const handleVisited = () => {
         setVisited(!visited);
+        handleVisitedCounty(country)
     };
 
+    // console.log(handleVisitedCounty);
+
+    //system-01
+    // const passwith =() => {
+    //     handleVisitedCounty(country);
+    // }
     
     
   return (
@@ -33,7 +40,7 @@ const Nation = ({ country }) => {
       <div className="btn">
       <button onClick={() => window.open(maps.googleMaps, '_blank')} className="btn_flag">MAP</button>
       <button onClick={handleVisited}  className="btn_visit">{visited ? 'Visited' : 'visit'}</button>
-      
+      {/* <button onClick={() => handleVisitedCounty(country)}>Mark</button> */}
       
     </div>
     </div>
@@ -56,7 +63,10 @@ Nation.propTypes = {
       maps: PropTypes.shape({
         googleMaps: PropTypes.string.isRequired,
       }).isRequired,
+
     }).isRequired,
+    handleVisitedCounty : PropTypes.shape({
+    }).isRequired
   };
 
 
