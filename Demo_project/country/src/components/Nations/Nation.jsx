@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Nation.css";
 import PropTypes from 'prop-types';
+import MoreDet from "../../MoreDet/MoreDet";
 // import Countries from "../Countries/Countries";
 
 const Nation = ({ country, handleVisitedCounty }) => {
@@ -41,9 +42,12 @@ const Nation = ({ country, handleVisitedCounty }) => {
       <button onClick={() => window.open(maps.googleMaps, '_blank')} className="btn_flag">MAP</button>
       <button onClick={handleVisited}  className="btn_visit">{visited ? 'Visited' : 'visit'}</button>
       {/* <button onClick={() => handleVisitedCounty(country)}>Mark</button> */}
-      
+      <hr></hr>
+    <MoreDet country ={country } handleVisitedCounty={handleVisitedCounty}></MoreDet>
     </div>
+    
     </div>
+    
     </div>
   );
 };
