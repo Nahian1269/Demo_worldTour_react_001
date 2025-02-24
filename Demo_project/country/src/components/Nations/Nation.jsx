@@ -47,7 +47,7 @@ const Nation = ({ country, handleVisitedCounty }) => {
     </div>
     
     </div>
-    
+   
     </div>
   );
 };
